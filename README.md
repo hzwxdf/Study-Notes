@@ -9,9 +9,9 @@
 ### git安装
   本次使用windows版本的git安装，默认github有账号。
   git下载地址：https://gitforwindows.org/
-  1.安装的话一直点下一步就可以了。
-  2.安装完成后会有几个应用。git bash、git cmd、git gui。
-  3.我们后续都是使用git bash。
+  1) 安装的话一直点下一步就可以了。
+  2) 安装完成后会有几个应用。git bash、git cmd、git gui。
+  3) 我们后续都是使用git bash。
 ### git的配置
   1. 打开git bash输入以下命令配置用户名和邮箱
   ```
