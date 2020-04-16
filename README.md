@@ -42,13 +42,13 @@
   ```
   4. 本地创建本地仓库
   在本地创建一个目录当做本地仓库，然后执行`git init`,这时目录下就多了.git隐藏文件夹了。
-  1）在当前目录下新建一个readme.md文件
-  2）然后使用`git add .`添加文件到暂存区
-  3）然后`git commit -m '注释'`提交。
+  1) 在当前目录下新建一个readme.md文件
+  2) 然后使用`git add .`添加文件到暂存区
+  3) 然后`git commit -m '注释'`提交。
   5. 上传到github仓库
   1) 在github网站复制一个创建好的仓库地址。
-  2）Git bash中执行`git remote add origin 复制的仓库地址`,关联远程仓库。
-  3）Git bash执行`git push -u origin master`推到远程仓库。(如果出错'failed to push some refs to git'，那么可能是远程仓库的readme.md文件本地没有，可以执行`git pull --rebase origin master`解决)
+  2) Git bash中执行`git remote add origin 复制的仓库地址`,关联远程仓库。
+  3) Git bash执行`git push -u origin master`推到远程仓库。(如果出错'failed to push some refs to git'，那么可能是远程仓库的readme.md文件本地没有，可以执行`git pull --rebase origin master`解决)
 
 ## git版本库
   版本库，又叫仓库。可以理解成一个目录，目录下所有文件都是由git管理的，你可以回退、查询、追踪修改历史等等。
