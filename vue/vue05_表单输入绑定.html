@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue-表单输入绑定</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<h3>表单输入绑定</h3>
+<div id="app">
+  <p>
+    v-model 在内部为不同的输入元素使用不同的属性并抛出不同的事件：
+      text 和 textarea 元素使用 value 属性和 input 事件；
+      checkbox 和 radio 使用 checked 属性和 change 事件；
+      select 字段将 value 作为 prop 并将 change 作为事件。
+  </p>
+
+  输入框input:<br>
+  <input type="text" v-model="text_input">
+  <label>输入内容:{{ text_input }}</label>
+
+  <br>多行文本textarea:<br>
+  <textarea v-model="text_area"></textarea>
+  <label>输入内容:{{ text_area }}</label>
+
+  <br>复选框checkbox:<br>
+  <p>单个复选框</p>
+  <input type="checkbox" v-model="checkbox_flg" id="a" value="1">
+  <label for="a">{{ checkbox_flg }}</label>
+  <p>多个复选框</p>
+  <input type="checkbox" v-model="checkbox_input" id="a" value="1">
+  <label for="a">1</label>
+  <input type="checkbox" v-model="checkbox_input" id="b" value="2">
+  <label for="b">2</label>
+  <input type="checkbox" v-model="checkbox_input" id="c" value="3">
+  <label for="c">3</label>
+  <p>选择内容:{{ checkbox_input }}</p>
+
+  <br>单选框radio:<br>
+  <input type="radio" v-model="radio_input" id="radio1" value="男">
+  <label for="radio1">男</label>
+  <input type="radio" v-model="radio_input" id="radio2" value="女">
+  <label for="radio2">女</label>
+  <p>选择内容:{{ radio_input }}</p>
+
+  <br>选择框(下拉框)select:<br>
+  <select v-model="select_val">
+    <option disabled="disabled" value="">请选择</option>
+    <option>a</option>
+    <option>b</option>
+    <option>c</option>
+  </select>
+  <p>下拉框选择多个值：{{ select_val }}</p>
+  <select v-model="select_vals" multiple style="width: 50px;">
+    <!-- multiple:允许选中多个值 -->
+    <option disabled="disabled" value="">请选择</option>
+    <option>a</option>
+    <option>b</option>
+    <option>c</option>
+  </select>
+  <p>下拉框选择：{{ select_vals }}</p>
+
+</div>
+<script type="text/javascript">
+  var vm =new Vue({
+    el: '#app',
+    data: {
+      text_input: '',
+      text_area: '',
+      checkbox_flg: false,
+      checkbox_input: [],
+      radio_input: '',
+      select_val: '',
+      select_vals: []
+    },
+    computed: {
+      checkbox_flg: function(){
+        this.checkbox_flg = !checkbox_flg
+      }
+    }
+  })
+</script>
+
+<h3>值绑定</h3>
+<div id="app2">
+  <p>当我们需要将表单输入的值绑定到动态属性上时，可以使用v-bind</p>
+  <input type="text" v-model="alias_name">
+  <input type="text" v-model="name" v-bind:value="alias_name">
+  <label>属性绑定：{{ name }} --> {{ alias_name }}</label>
+</div>
+<script type="text/javascript">
+  var vm2 = new Vue({
+    el: '#app2',
+    data: {
+      name: '',
+      alias_name: ''
+    }
+  })
+</script>
+
+<h3>修饰符</h3>
+<div id="app3">
+  <p>.lazy
+在默认情况下，v-model 在每次 input 事件触发后将输入框的值与数据进行同步 (除了上述输入法组合文字时)。你可以添加 lazy 修饰符，从而转变为使用 change 事件进行同步：
+.number
+如果想自动将用户的输入值转为数值类型，可以给 v-model 添加 number 修饰符：
+这通常很有用，因为即使在 type="number" 时，HTML 输入元素的值也总会返回字符串。如果这个值无法被 parseFloat() 解析，则会返回原始的值。
+.trim
+如果要自动过滤用户输入的首尾空白字符，可以给 v-model 添加 trim 修饰符：</p>
+  lazy<input type="text" v-model.lazy="name">
+  <label>数据：{{ name }}</label><br>
+  number<input type="text" v-model.number="name2">
+  <label>数据：{{ name2 }}</label><br>
+  trim<input type="text" v-model.trim="name3">
+  <label>数据：{{ name3 }}</label><br>
+</div>
+<script type="text/javascript">
+  var vm2 = new Vue({
+    el: '#app3',
+    data: {
+      name: '',
+      name2: '',
+      name3: ''
+    }
+  })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue-组件</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+	<p>组件是一个可复用的vue实例，有vue实例的data、computed、methods、watch、生命周期等等</p>
+	<p>组件复用时会独立维护各自的组件实例，不会相互影响</p>
+	<my-button></my-button>
+	<my-button></my-button><br>
+	<blog-title title="博客标题"></blog-title><br>
+	<blog 
+		v-for="item in blog_datas"
+		:key="item.id"
+		:title="item.title"
+		:content="item.content"
+	>
+	</blog>
+	<div :style="{ fontSize: psize + 'em' }">
+		<blog-v2
+			v-for="item in blog_datas2"
+			:key="item.id"
+			:blog="item"
+			@add_size="psize += 0.1"
+			@add_size2="psize += $event"
+			@add_size3="add_method"
+		>
+		</div>
+		</blog-v2>
+	</div>
+<script type="text/javascript">
+	
+	// 定义一个组件，通过Vue.component注册的是全局组件，可被后面的(new Vue创建)vue实例使用。
+	Vue.component('my-button', {
+		// 组件的data属性不是一个对象，而是一个函数
+		data: function () {
+		  return {
+		    count: 0
+		  }
+		},
+		template: '<button @click="count++">你点击了{{count}}次</button>'
+	})
+	// props允许添加任意个自定义attributes
+	Vue.component('blog-title', {
+		props: ['title'],
+		template: '<h3>{{ title }}</h3>'
+	})
+	Vue.component('blog', {
+		props: ['title', 'content'],
+		template: '<div><h3>{{ title }}</h3><label>{{ content }}</label></div>'
+	})
+	// 当一个博客组件需要越来越多的prop时，需要重新定义组件，让它只接受一个prop
+	Vue.component('blog-v2', {
+		props: ['blog'],
+		//template: '<div><h3>{{ blog.title }}</h3><label>{{ blog.content }}</label></div>'
+		// 上面的模板部分的字符串看起来很影响阅读，我们可以使用js的模板字符串``解决，ie可以使用折行转义字符\
+		// ` asa  sadsa `  "asa\ sadsa"
+		template: `
+			<div>
+				<h3>{{ blog.title }}</h3>
+				<p>父组件app在blog-v2上面监听add_size事件，blog-v2这里使用$emit传入事件名来触发事件</p>
+				<button @click="$emit('add_size')">加大内容字体</button>
+				<p>事件可以抛出一个参数，在父组件通过$event来获取这个值</p>
+				<button @click="$emit('add_size2', 0.1)">加大内容字体2</button>
+				<p>事件可以抛出一个参数，在父组件通过$event来获取这个值,如果父组件监听是一个方法，那么这个值会变成方法的参数传进去。</p>
+				<button @click="$emit('add_size3', 0.1)">加大内容字体3</button>
+				<label>{{ blog.content }}</label>
+			</div>
+
+		`
+	})
+	// vue根实例
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			psize: 1,
+			blog_datas: [
+				{ id: 1, title: "标题1", content: "内容1" },
+				{ id: 2, title: "标题2", content: "内容2" },
+				{ id: 3, title: "标题3", content: "内容3" }
+			],
+			blog_datas2: [
+				{ id: 4, title: "v2标题1", content: "内容1" },
+				{ id: 5, title: "v2标题2", content: "内容2" },
+				{ id: 6, title: "v2标题3", content: "内容3" }
+			]
+		},
+		methods: {
+			add_method: function(param){
+				this.psize += param
+			}
+		}
+	})
+</script>
+
+
+<div id="app2">
+	<p>在组件上使用v-model
+	<!-- 普通input中使用v-model:
+	<code>
+		<input v-model="text">
+		等价于=
+		<input 
+			v-bind:value="text"
+			v-on:input="text = $event.target.value"
+		></input>
+	</code>
+	组件中使用v-model:
+	<code>
+		<my-input v-model="text">
+		等价于
+		<my-input
+			v-bind:value="text"
+			v-on:input="text = $event"
+		></my-input>
+		为了让它正常工作，这个组件内的input必须：
+		将其 value attribute 绑定到一个名叫 value 的 prop 上
+		在其 input 事件被触发时，将新的值通过自定义的 input 事件抛出
+		代码：
+		Vue.com
+	</code> -->
+	</p>
+	<my-input
+		v-model="msg"
+	>
+	</my-input>
+	<label>父组件：{{msg}}</label>
+</div>
+<script type="text/javascript">
+	Vue.component('my-input', {
+		props: ['value'],
+		template: `
+			<div>
+				<input
+					:value="value"
+					@input="$emit('input', $event.target.value)"
+				>
+			</div>
+		`
+	})
+	var vm2 = new Vue({
+		el: '#app2',
+		data: {
+			msg: ''
+		}
+	})
+</script>
+
+<div id="app3">
+	<p>插槽slot</p>
+	<my-p>这是要插入<b>my-p</b>组件的内容:</my-p>
+</div>
+<script type="text/javascript">
+	Vue.component('my-p', {
+		template: `
+			<p>
+				<strong>下面是插槽的使用</strong>
+				<slot></slot>
+			</p>
+		`
+	})
+	var vm3 =  new Vue({
+		el: '#app3'
+	})
+</script>
+
+</body>
+</html>

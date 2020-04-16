@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue-class和style绑定</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<!-- 
+<h4>侦听器</h4>
+<div id="app">
+  <p>{{ msg }}</p>
+  <input v-model="msg">
+</div>
+<script type="text/javascript">
+  var vm = new Vue({
+  	el: '#app',
+  	data: {
+  	  msg: 'test msg'
+  	}
+  })
+</script>
+ -->
+<style type="text/css">
+  .span_red{
+  	color: red;
+  }
+  .span_green{
+  	font-size: 120%;
+  }
+</style>
+<h4>绑定html class:对象语法</h4>
+<div id="app2">
+  <p v-bind:class="{ span_red: red_flg, 'span_green': green_flg }">对象语法</p>
+  <p v-bind:class="class_object">对象语法2</p>
+  <p v-bind:class="[ span_red, span_green ]">数组语法</p>
+</div>
+<script type="text/javascript">
+  var vm = new Vue({
+  	el: '#app2',
+  	data: {
+  	  red_flg: true,
+  	  green_flg: false,
+  	  class_object: {
+        span_red: true,
+        'span_green': true
+  	  }
+  	}
+  })
+</script>
+
+
+<h4>绑定html class:数组语法</h4>
+<div id="app3">
+  <p v-bind:class="[ red_class, green_class ]">数组语法</p>
+</div>
+<script type="text/javascript">
+  var vm = new Vue({
+  	el: '#app3',
+  	data: {
+  	  red_class: 'span_red',
+  	  green_class: 'span_green'
+  	}
+  })
+</script>
+
+<h4>绑定内联样式</h4>
+<div id="app4">
+  <p v-bind:style="{ color: 'green', fontSize: '200%' }">对象语法</p>
+  <p v-bind:style="inner_class">对象语法2</p>
+  <p v-bind:style="[ red_class, green_class ]">数组语法</p>
+</div>
+<script type="text/javascript">
+  var data_class = {
+    color: 'green',
+    fontSize: '40px'
+  }
+  var vm = new Vue({
+  	el: '#app4',
+  	data: {
+  	  inner_class: data_class,
+  	  red_class: 'span_red',
+  	  green_class: 'span_green'
+  	}
+  })
+</script>
+
+</body>
+</html>

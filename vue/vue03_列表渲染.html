@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue-条件渲染</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<h3>v-for列表渲染</h3>
+<div id="app">
+  <p>
+    可以使用v-for通过数组渲染一组列表，语法是item in items,其中items是源数组，item是每个数组元素。in可以使用of替换。<br>
+    v-for还支持第二个参数，就是索引,语法：(item,index) in items。<br>
+    v-for块中可以访问父作用域中的数据。<br>
+    v-for为了能高效使用，需要给每个数据项提供一个唯一key。v-bind:key
+  </p>
+  <p v-for="(item,index) in items" v-bind:key="item.id">
+    {{ parentMSG }} - 下标:{{ index }}  - 元素:{{ item }}
+  </p>
+  <label>v-for遍历对象:这也支持第二个参数也就是属性名,第三个参数是索引 </label>
+  <p v-for="(value,name,index) in object">
+    {{ index }} -- {{ name }} -- {{value}}
+  </p>
+</div>
+<script type="text/javascript">
+  var vm2 =new Vue({
+    el: '#app',
+    data: {
+      parentMSG: '父作用域数据',
+      items: [
+        '朱雀',
+        '白虎',
+        '玄武',
+        '青龙'
+      ],
+      object: {
+        name: "名字",
+        age: 200
+      }
+    }
+  })
+</script>
+
+
+<h3>数组更新检测</h3>
+<div id="app2">
+  <p>
+    变异方法：会改变调用方法的原数组。<br>
+    push()<br>
+    pop()<br>
+    shift()<br>
+    unshift()<br>
+    splice()<br>
+    sort()<br>
+    reverse()<br>
+  </p>
+  <p>
+    非变异方法：不会改变原数组，每次生成新数组。看起来会花费较大开销，但是vue对此优化，替换数组是一个高效操作。
+    一些非变异方法，例如 filter()、concat() 和 slice() 。
+  </p>
+  <p v-for="item in items">
+    {{ item }}
+  </p>
+  <hr>
+  <p>
+    不能检测到数组更新的情况：<br>
+    1. 通过下标添加、修改，例如：items[2]='22'。<br>
+    2. 通过该表数组长度，例如items.length = 5。<br>
+    上面的对应方法：
+    1.通过全局方法Vue.set(vm.items,itemofIndex, newValue)或者实例方法vm.$set(vm.items,itemofIndex, newValue)
+      Vue.set(vm2.items, 0, "newapp")  /  vm2.$set(vm2.items,1,"newapp2")
+    2.通过vm.items.splice(newlength)方法。
+      vm2.items.splice(4)
+  </p>
+  <p v-for="item in items">
+    {{ item }}
+  </p>
+  <hr>
+  <p>
+    对象更新检测
+    1. 由于js限制，不能检测对象属性的添加修改。
+    对应办法：
+    对于已经创建的实例，Vue 不允许动态添加根级别的响应式属性。但是，可以使用 Vue.set(object, propertyName, value) 方法向嵌套对象添加响应式属性。
+    Vue.set(vm2.object,'sex',"男") /  vm2.$set(vm2.object,'sex',"男")
+    当想要一次添加多个属性时：可以使用 Object.assign() 或 _.extend()。
+    在这种情况下，你应该用两个对象的属性创建一个新的对象。所以，如果你想添加新的响应式属性，不要像这样：
+    <pre>
+      Object.assign(vm.userProfile, {
+        age: 27,
+        favoriteColor: 'Vue Green'
+      })
+      你应该这样做：
+      vm.userProfile = Object.assign({}, vm.userProfile, {
+        age: 27,
+        favoriteColor: 'Vue Green'
+      })
+    </pre>
+  </p>
+</div>
+<script type="text/javascript">
+  var vm2 = new Vue({
+    el: '#app2',
+    data: {
+      items: [
+        'app1',
+        'app2',
+        'app3'
+      ],
+      object: {
+        name: '民族',
+        age: 20
+      }
+    }
+  })
+</script>
+
+<h3>当想要显示排序或者过滤后的数组,可以使用计算属性或者方法</h3>
+<div id="app4">
+  <li v-for="item in evenNumber">计算属性过滤后:{{ item }}</li>
+  <li v-for="item in evenNumber2(numbers2)">方法过滤后:{{ item }}</li>
+  <li v-for="i in 4">整型数值当做数组：{{i}}</li>
+  <label>使用template渲染多个元素</label>
+  <template v-for="(item,index) in numbers2">
+    <b>下标:{{index}}</b>==元素:<span>{{item}}</span><br>
+  </template>
+  <p>当它们处于同一节点，v-for 的优先级比 v-if 更高，这意味着 v-if 将分别重复运行于每个 v-for 循环中。当你只想为部分项渲染节点时，这种优先级的机制会十分有用</p>
+</div>
+<script type="text/javascript">
+  var vm4 = new Vue({
+    el: '#app4',
+    data: {
+      numbers: [1,23,4,5,67,2],
+      numbers2: [1,4,5,6,2]
+    },
+    computed: {
+      evenNumber: function(){
+        number = []
+        for(n in this.numbers){
+          if (n % 2 == 0){
+            number.push(n)
+          }
+        }
+        return this.numbers=number
+      }
+    },
+    methods: {
+      evenNumber2: function(numbers){
+        number = []
+        for(n in numbers){
+          if (n % 2 == 0){
+            number.push(n)
+          }
+        }
+        return number
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
