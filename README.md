@@ -33,9 +33,9 @@
   1）是路径确认，直接按回车存默认路径即可
   2）直接回车键，这里我们不使用密码进行登录, 用密码太麻烦;
   3）确认密码,直接回车键
-  结束后会在对应路径下生成：id_rsa和id_rsa.pub两个文件。我们需要复制id_rsa.pub的内容。
+  结束后会在对应路径下生成`id_rsa`和`id_rsa.pub`两个文件。我们需要复制`id_rsa.pub`的内容。
   3. github的ssh连接
-  将id_rsa.pub的内容复制到github网站的`SSH key`中(title部分随便填，keys的内容就是复制的内容)。
+  将`id_rsa.pub`的内容复制到github网站的`SSH key`中(title部分随便填，keys的内容就是复制的内容)。
   可以在Git bash中输入一下命令确认,出现Successfully就代表成功。
   ```
   ssh -T git@github.com
@@ -48,7 +48,7 @@
   5. 上传到github仓库
   1) 在github网站复制一个创建好的仓库地址。
   2) Git bash中执行`git remote add origin 复制的仓库地址`,关联远程仓库。
-  3) Git bash执行`git push -u origin master`推到远程仓库。(如果出错'failed to push some refs to git'，那么可能是远程仓库的readme.md文件本地没有，可以执行`git pull --rebase origin master`解决)
+  3) Git bash执行`git push -u origin master`推到远程仓库。(如果出错`failed to push some refs to git`，那么可能是远程仓库的readme.md文件本地没有，可以执行`git pull --rebase origin master`解决)
 
 ## git版本库
   版本库，又叫仓库。可以理解成一个目录，目录下所有文件都是由git管理的，你可以回退、查询、追踪修改历史等等。
