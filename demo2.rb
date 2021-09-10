@@ -52,3 +52,4 @@ def print_str(str)
 end
 
 print_str("ai is good")
+p "-------"
