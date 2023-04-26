@@ -4,39 +4,39 @@
 
 ### 1.1 基本概念
 
-![](/images/2023-04-18-17-49-56-image.png)
+![](./images/2023-04-18-17-49-56-image.png)
 
 ### 1.2 包的命名
 
-![](/images/2023-04-18-17-55-33-image.png)
+![](./images/2023-04-18-17-55-33-image.png)
 
 ### 1.3 常用的包
 
-![](/images/2023-04-18-17-57-32-image.png)
+![](./images/2023-04-18-17-57-32-image.png)
 
 ### 1.4 包的使用细节
 
-![](/images/2023-04-18-17-58-54-image.png)
+![](./images/2023-04-18-17-58-54-image.png)
 
-![](/images/2023-04-18-18-03-27-image.png)
+![](./images/2023-04-18-18-03-27-image.png)
 
 ### 1.6 访问修饰符
 
-![](/images/2023-04-18-18-05-14-image.png)
+![](./images/2023-04-18-18-05-14-image.png)
 
-![](/images/2023-04-18-18-08-01-image.png)
+![](./images/2023-04-18-18-08-01-image.png)
 
 ## 2. 面向对象编程三大特性
 
 面向对象编程有三大特性：封装、继承和多态。
 
-![](/images/2023-04-18-18-17-26-image.png)
+![](./images/2023-04-18-18-17-26-image.png)
 
 ### 2.1 封装
 
-![](/images/2023-04-18-18-25-13-image.png)
+![](./images/2023-04-18-18-25-13-image.png)
 
-![](/images/2023-04-18-18-25-55-image.png)
+![](./images/2023-04-18-18-25-55-image.png)
 
 ```java
 class Person {
@@ -91,35 +91,35 @@ Person p2 = new Person(“encpaslution”, 99);
 
 ### 2.2 继承
 
-![](/images/2023-04-18-18-58-09-image.png)
+![](./images/2023-04-18-18-58-09-image.png)
 
 #### 2.2.1 继承的细节
 
-![](/images/2023-04-20-17-19-13-image.png)
+![](./images/2023-04-20-17-19-13-image.png)
 
-![](/images/2023-04-20-17-32-04-image.png)
+![](./images/2023-04-20-17-32-04-image.png)
 
-![](/images/2023-04-20-17-43-00-image.png)
+![](./images/2023-04-20-17-43-00-image.png)
 
-![](/images/2023-04-20-17-53-39-image.png)
+![](./images/2023-04-20-17-53-39-image.png)
 
-![](/images/2023-04-20-17-58-21-image.png)
+![](./images/2023-04-20-17-58-21-image.png)
 
 #### 2.2.2 继承的本质
 
-![](/images/2023-04-20-18-02-03-image.png)
+![](./images/2023-04-20-18-02-03-image.png)
 
-![](/images/2023-04-20-18-14-45-image.png)
+![](./images/2023-04-20-18-14-45-image.png)
 
 #### 2.2.3 super的使用
 
-![](/images/2023-04-20-18-42-44-image.png)
+![](./images/2023-04-20-18-42-44-image.png)
 
-![](/images/2023-04-20-19-00-44-image.png)
+![](./images/2023-04-20-19-00-44-image.png)
 
-![](/images/2023-04-20-19-01-04-image.png)
+![](./images/2023-04-20-19-01-04-image.png)
 
-![](/images/2023-04-20-19-08-36-image.png)
+![](./images/2023-04-20-19-08-36-image.png)
 
 继承中属性和方法的查找遵循最近原则，先本来查找属性或者方法，找不到再查找父类，找不到就继续向上查找，知道Object类。
 
@@ -186,11 +186,11 @@ b.test();
 
 #### 2.2.4 方法重写(Override)
 
-![](/images/2023-04-20-19-36-20-image.png)
+![](./images/2023-04-20-19-36-20-image.png)
 
-![](/images/2023-04-20-19-39-09-image.png)
+![](./images/2023-04-20-19-39-09-image.png)
 
-![](/images/2023-04-20-20-09-31-image.png)
+![](./images/2023-04-20-20-09-31-image.png)
 
 ```java
 class A {
@@ -232,13 +232,13 @@ class Student extends Person {
 
 #### 2.3.1 多态基本介绍
 
-![](/images/2023-04-20-20-52-53-image.png)
+![](./images/2023-04-20-20-52-53-image.png)
 
-![](/images/2023-04-20-20-55-55-image.png)
+![](./images/2023-04-20-20-55-55-image.png)
 
 #### 2.3.2 多态细节
 
-![](/images/2023-04-20-21-06-34-image.png)
+![](./images/2023-04-20-21-06-34-image.png)
 
 向上转型：
 
@@ -248,7 +248,7 @@ class Student extends Person {
 
 3.最终运行效果看子类的具体实现。（运行时看运行类型。调用方法时，从子类方法开始查找开始调用，找不到向上查找）
 
-![](/images/2023-04-20-21-19-40-image.png)
+![](./images/2023-04-20-21-19-40-image.png)
 
 向下转型：
 
@@ -261,7 +261,7 @@ A a1 = new B();
 B b2 = (B)a1;// 强转父类的引用
 ```
 
-![](/images/2023-04-20-21-27-53-image.png)
+![](./images/2023-04-20-21-27-53-image.png)
 
 注意：instanceof判断的是运行类型。
 
@@ -289,7 +289,7 @@ b1.instanceof B;//true
 
 #### 2.3.3 动态绑定机制
 
-![](/images/2023-04-20-21-53-08-image.png)
+![](./images/2023-04-20-21-53-08-image.png)
 
 动态绑定机制：
 
@@ -343,28 +343,28 @@ B中有sum3方法，所以去B中找，B中返回的也是属性
 
 #### 2.3.4 多态练习
 
-![](/images/2023-04-20-22-16-03-image.png)
+![](./images/2023-04-20-22-16-03-image.png)
 
-![](/images/2023-04-20-22-18-01-image.png)
+![](./images/2023-04-20-22-18-01-image.png)
 
 ### 2.4 equals方法
 
-![](/images/2023-04-20-22-22-15-image.png)
+![](./images/2023-04-20-22-22-15-image.png)
 
-![](/images/2023-04-20-22-24-03-image.png)
+![](./images/2023-04-20-22-24-03-image.png)
 
 ### 2.5 hashCode方法
 
-![](/images/2023-04-20-22-37-54-image.png)
+![](./images/2023-04-20-22-37-54-image.png)
 
 
 
 ### 2.6 toString方法
 
-![](/images/2023-04-21-19-30-16-image.png)
+![](./images/2023-04-21-19-30-16-image.png)
 
 
 
 ### 2.6 finalize方法
 
-![](/images/2023-04-21-19-31-01-image.png)
+![](./images/2023-04-21-19-31-01-image.png)
