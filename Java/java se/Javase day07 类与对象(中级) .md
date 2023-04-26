@@ -347,8 +347,6 @@ B中有sum3方法，所以去B中找，B中返回的也是属性
 
 ![](/images/2023-04-20-22-18-01-image.png)
 
-
-
 ### 2.4 equals方法
 
 ![](/images/2023-04-20-22-22-15-image.png)
@@ -358,3 +356,15 @@ B中有sum3方法，所以去B中找，B中返回的也是属性
 ### 2.5 hashCode方法
 
 ![](/images/2023-04-20-22-37-54-image.png)
+
+
+
+### 2.6 toString方法
+
+![](/images/2023-04-21-19-30-16-image.png)
+
+
+
+### 2.6 finalize方法
+
+![](/images/2023-04-21-19-31-01-image.png)
