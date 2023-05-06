@@ -14,13 +14,13 @@
 
 #### 1.1.1 类变量的内存分析
 
-![](./images\2023-04-25-20-40-32-image.png)
+![](./images/2023-04-25-20-40-32-image.png)
 
 类变量：jdk7、8之前是放在方法区的静态域中，jdk8以后是放在堆中。
 
 #### 1.1.2 类变量的定义
 
-![](./images\2023-04-25-20-45-25-image.png)
+![](./images/2023-04-25-20-45-25-image.png)
 
 ```java
 public class Test {
@@ -45,9 +45,9 @@ class A {
 
 #### 1.1.3 类变量的使用细节
 
-![](./images\2023-04-25-20-52-42-image.png)
+![](./images/2023-04-25-20-52-42-image.png)
 
-![](./images\2023-04-25-20-55-06-image.png)
+![](./images/2023-04-25-20-55-06-image.png)
 
 ### 1.2 类方法
 
@@ -59,7 +59,7 @@ class A {
 
 #### 1.2.1 基本介绍
 
-![](./images\2023-04-25-20-56-56-image.png)
+![](./images/2023-04-25-20-56-56-image.png)
 
 ```java
 public class Test {
@@ -87,15 +87,15 @@ class A {
 
 #### 1.2.2 类方法的细节
 
-![](./images\2023-04-25-21-05-33-image.png)
+![](./images/2023-04-25-21-05-33-image.png)
 
-![](./images\2023-04-25-21-06-49-image.png)
+![](./images/2023-04-25-21-06-49-image.png)
 
 ## 2. main语法
 
-![](./images\2023-04-25-21-15-42-image.png)
+![](./images/2023-04-25-21-15-42-image.png)
 
-![](./images\2023-04-25-21-21-15-image.png)
+![](./images/2023-04-25-21-21-15-image.png)
 
 ## 3. 代码块
 
@@ -111,13 +111,13 @@ class A {
 
 ### 3.1 基本介绍
 
-![](./images\2023-04-25-21-26-45-image.png)
+![](./images/2023-04-25-21-26-45-image.png)
 
-![](./images\2023-04-25-21-29-37-image.png)
+![](./images/2023-04-25-21-29-37-image.png)
 
 ### 3.2 代码块的细节
 
-![](./images\2023-04-25-21-35-32-image.png)
+![](./images/2023-04-25-21-35-32-image.png)
 
 ```java
 public class Test {
@@ -174,7 +174,7 @@ class ST4 {
 }
 ```
 
-![](./images\2023-04-25-21-58-00-image.png)
+![](./images/2023-04-25-21-58-00-image.png)
 
 ```java
 public class Test {
@@ -248,9 +248,9 @@ class ST1 {
 }
 ```
 
-![](./images\2023-04-25-22-19-25-image.png)
+![](./images/2023-04-25-22-19-25-image.png)
 
-![](./images\2023-04-25-22-23-59-image.png)
+![](./images/2023-04-25-22-23-59-image.png)
 
 ```java
 public class Test {
@@ -356,13 +356,13 @@ class ST2 extends ST1 {
 
 ### 3.3 单例设计模式
 
-![](./images\2023-04-26-19-45-19-image.png)
+![](./images/2023-04-26-19-45-19-image.png)
 
-![](./images\2023-04-26-19-45-43-image.png)
+![](./images/2023-04-26-19-45-43-image.png)
 
-![](./images\2023-04-26-19-46-17-image.png)
+![](./images/2023-04-26-19-46-17-image.png)
 
-![](./images\2023-04-26-20-04-52-image.png)
+![](./images/2023-04-26-20-04-52-image.png)
 
 ```java
 /**
@@ -409,7 +409,7 @@ class SingleTon02 {
 
 ### 4.1 基本介绍
 
-![](./images\2023-04-26-20-10-26-image.png)
+![](./images/2023-04-26-20-10-26-image.png)
 
 ```java
 // final表示类不可以被继承
@@ -429,7 +429,7 @@ class User {
 
 ### 4.2 final关键字的细节
 
-![](./images\2023-04-26-20-19-23-image.png)
+![](./images/2023-04-26-20-19-23-image.png)
 
 ```java
 public class FinalDemo {
@@ -481,7 +481,7 @@ class DC extends D {
 }
 ```
 
-![](./images\2023-04-26-20-36-37-image.png)
+![](./images/2023-04-26-20-36-37-image.png)
 
 ```java
 public class FinalDemo02 {
@@ -511,27 +511,27 @@ class BB {
 
 ### 5.1 基本介绍
 
-![](./images\2023-04-26-20-47-36-image.png)
+![](./images/2023-04-26-20-47-36-image.png)
 
-![](./images\2023-04-26-20-50-03-image.png)
+![](./images/2023-04-26-20-50-03-image.png)
 
-![](./images\2023-04-26-20-51-03-image.png)
+![](./images/2023-04-26-20-51-03-image.png)
 
 ### 5.2 抽象类的细节
 
-![](./images\2023-04-26-20-52-53-image.png)
+![](./images/2023-04-26-20-52-53-image.png)
 
-![](./images\2023-04-26-20-56-02-image.png)
+![](./images/2023-04-26-20-56-02-image.png)
 
-![](./images\2023-04-26-20-58-59-image.png)
+![](./images/2023-04-26-20-58-59-image.png)
 
 ### 5.3 模板设计模式
 
 抽象类的最佳实践模板设计模式。
 
-![](./images\2023-04-26-21-09-23-image.png)
+![](./images/2023-04-26-21-09-23-image.png)
 
-![](./images\2023-04-26-21-18-58-image.png)
+![](./images/2023-04-26-21-18-58-image.png)
 
 ```java
 /**
@@ -568,7 +568,7 @@ class User extends Template {
 
 ### 6.1 基本介绍
 
-![](./images\2023-04-26-21-44-29-image.png)
+![](./images/2023-04-26-21-44-29-image.png)
 
 ```java
 interface USBInterface {
@@ -594,29 +594,29 @@ class Computer implements USBInterface {
 
 ### 6.2 接口的细节
 
-![](./images\2023-04-26-22-01-05-image.png)
+![](./images/2023-04-26-22-01-05-image.png)
 
-![](./images\2023-04-26-22-02-54-image.png)
+![](./images/2023-04-26-22-02-54-image.png)
 
 ### 6.4 接口和继承类
 
-![](./images\2023-04-26-22-08-53-image.png)
+![](./images/2023-04-26-22-08-53-image.png)
 
-![](./images\2023-04-26-22-10-28-image.png)
+![](./images/2023-04-26-22-10-28-image.png)
 
 ### 6.5 接口的多态性
 
-![](./images\2023-04-26-22-12-08-image.png)
+![](./images/2023-04-26-22-12-08-image.png)
 
 ## 7. 内部类
 
-![](./images\2023-04-27-20-42-04-image.png)
+![](./images/2023-04-27-20-42-04-image.png)
 
-![](./images\2023-04-27-20-45-21-image.png)
+![](./images/2023-04-27-20-45-21-image.png)
 
 ### 7.1 局部内部类
 
-![](./images\2023-04-27-20-47-55-image.png)
+![](./images/2023-04-27-20-47-55-image.png)
 
 ```java
 /**
@@ -674,7 +674,7 @@ class Outer01 {
 }
 ```
 
-![](./images\2023-04-27-21-12-29-image.png)
+![](./images/2023-04-27-21-12-29-image.png)
 
 ```java
 /**
@@ -721,7 +721,7 @@ class Outer02 {
 
 #### 7.2.1 基本介绍
 
-![](./images\2023-04-27-22-09-26-image.png)
+![](./images/2023-04-27-22-09-26-image.png)
 
 ```java
 /**
@@ -842,11 +842,11 @@ abstract class User {
 
 #### 7.2.2 匿名内部类的细节
 
-![](./images\2023-04-27-22-59-22-image.png)
+![](./images/2023-04-27-22-59-22-image.png)
 
-![](./images\2023-04-28-18-37-41-image.png)
+![](./images/2023-04-28-18-37-41-image.png)
 
-![](./images\2023-04-28-18-39-44-image.png)
+![](./images/2023-04-28-18-39-44-image.png)
 
 ```java
 // TODO
@@ -854,17 +854,17 @@ abstract class User {
 
 #### 7.2.3 匿名内部类的实践
 
-![](./images\2023-04-28-18-44-45-image.png)
+![](./images/2023-04-28-18-44-45-image.png)
 
 
 
 ### 7.3 成员内部类
 
-![](./images\2023-05-05-21-44-21-image.png)
+![](./images/2023-05-05-21-44-21-image.png)
 
-![](./images\2023-05-05-22-00-45-image.png)
+![](./images/2023-05-05-22-00-45-image.png)
 
-![](./images\2023-05-05-22-09-06-image.png)
+![](./images/2023-05-05-22-09-06-image.png)
 
 ```java
 /**
@@ -945,13 +945,13 @@ class Outer05 {
 
 ### 7.4 静态内部类
 
-![](./images\2023-05-05-22-39-10-image.png)
+![](./images/2023-05-05-22-39-10-image.png)
 
-![](./images\2023-05-05-22-43-19-image.png)
+![](./images/2023-05-05-22-43-19-image.png)
 
-![](./images\2023-05-05-22-44-48-image.png)
+![](./images/2023-05-05-22-44-48-image.png)
 
-![](./images\2023-05-05-22-48-51-image.png)
+![](./images/2023-05-05-22-48-51-image.png)
 
 ```java
 /**
