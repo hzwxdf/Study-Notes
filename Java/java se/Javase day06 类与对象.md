@@ -6,27 +6,27 @@
 
 一个程序就是一个世界，有很多事物(对象[属性，行为])。
 
-![](./images/2023-04-14-20-07-49-image.png)
+![](./images/day01-day08/2023-04-14-20-07-49-image.png)
 
-![](./images/2023-04-14-20-08-48-image.png)
+![](./images/day01-day08/2023-04-14-20-08-48-image.png)
 
 ## 1.2 类与对象的内存布局
 
-![](./images/2023-04-14-20-10-15-image.png)
+![](./images/day01-day08/2023-04-14-20-10-15-image.png)
 
 ## 1.3 类与对象之属性
 
-![](./images/2023-04-14-20-11-26-image.png)
+![](./images/day01-day08/2023-04-14-20-11-26-image.png)
 
-![](./images/2023-04-14-20-11-42-image.png)
+![](./images/day01-day08/2023-04-14-20-11-42-image.png)
 
 ## 1.4 对象创建
 
-![](./images/2023-04-14-20-13-03-image.png)
+![](./images/day01-day08/2023-04-14-20-13-03-image.png)
 
 ## <mark> 1.5 类与对象的分配机制</mark>
 
-![](./images/2023-04-14-20-14-22-image.png)
+![](./images/day01-day08/2023-04-14-20-14-22-image.png)
 
 ### 1.5.1 流程说明
 
@@ -50,13 +50,13 @@ Java内存的结构分析
 
 3. 方法区：常量池(常量，比如字符串)、类加载信息
 
-![](./images/2023-04-14-20-32-11-image.png)
+![](./images/day01-day08/2023-04-14-20-32-11-image.png)
 
 ## 1.6 成员方法
 
 ### 1.6.1 概念
 
-![](./images/2023-04-14-20-38-25-image.png)
+![](./images/day01-day08/2023-04-14-20-38-25-image.png)
 
 ```java
 // 方法定义
@@ -77,23 +77,23 @@ getSum(2, 8);
 
 ### <mark> 1.6.2 方法的调用机制</mark>
 
-![](./images/2023-04-14-21-07-49-image.png)
+![](./images/day01-day08/2023-04-14-21-07-49-image.png)
 
 ### 1.6.3 成员方法的定义
 
-![](./images/2023-04-14-21-11-02-image.png)
+![](./images/day01-day08/2023-04-14-21-11-02-image.png)
 
 ### 1.6.4 成员方法的注意事项和使用细节
 
-![](./images/2023-04-14-21-12-28-image.png)
+![](./images/day01-day08/2023-04-14-21-12-28-image.png)
 
-![](./images/2023-04-14-21-15-44-image.png)
+![](./images/day01-day08/2023-04-14-21-15-44-image.png)
 
-![](./images/2023-04-14-21-20-03-image.png)
+![](./images/day01-day08/2023-04-14-21-20-03-image.png)
 
 ### 1.6.5 方法练习题
 
-![](./images/2023-04-14-21-23-56-image.png)
+![](./images/day01-day08/2023-04-14-21-23-56-image.png)
 
 ```java
 // 练习1：
@@ -126,27 +126,27 @@ printFormatString(4, 4, "#");
 
 对应基本数据类型，方法传参传递的是值拷贝。
 
-![](./images/2023-04-14-21-47-20-image.png)
+![](./images/day01-day08/2023-04-14-21-47-20-image.png)
 
-![](./images/2023-04-14-21-46-13-image.png)
+![](./images/day01-day08/2023-04-14-21-46-13-image.png)
 
 #### 1.6.6.2 引用数据类型
 
 引用数据类型，方法传参传递的是地址。
 
-![](./images/2023-04-14-21-56-11-image.png)
+![](./images/day01-day08/2023-04-14-21-56-11-image.png)
 
-![](./images/2023-04-14-21-55-53-image.png)
+![](./images/day01-day08/2023-04-14-21-55-53-image.png)
 
 说明：`Person p = new Person()`的前提下，`p = null`和`p = new Person()`不会对原来的对象产生影响。
 
-![](./images/2023-04-14-22-03-10-image.png)
+![](./images/day01-day08/2023-04-14-22-03-10-image.png)
 
-![](./images/2023-04-14-22-02-44-image.png)
+![](./images/day01-day08/2023-04-14-22-02-44-image.png)
 
 #### 1.6.6.3 方法传参练习
 
-![](./images/2023-04-14-22-05-13-image.png)
+![](./images/day01-day08/2023-04-14-22-05-13-image.png)
 
 ```java
 // 练习2：克隆对象
@@ -174,9 +174,9 @@ Person copyP = copyPerson(p);
 
 递归就是方法自己调用自己，每次调用时传入不同的变量。
 
-![](./images/2023-04-14-22-58-59-image.png)
+![](./images/day01-day08/2023-04-14-22-58-59-image.png)
 
-![](./images/2023-04-14-22-31-14-image.png)
+![](./images/day01-day08/2023-04-14-22-31-14-image.png)
 
 ```java
 // 练习：打印阶乘
@@ -257,7 +257,7 @@ System.out.println(fibonacci(5));
 
 ### 1.8.2 猴子吃桃
 
-![](./images/2023-04-15-12-46-43-image.png)
+![](./images/day01-day08/2023-04-15-12-46-43-image.png)
 
 ```java
 /*
@@ -287,7 +287,7 @@ System.out.println(monkeyEatPeach(1));
 
 ### 1.8.3 老鼠出迷宫
 
-![](./images/2023-04-15-13-44-21-image.png)
+![](./images/day01-day08/2023-04-15-13-44-21-image.png)
 
 ```java
 /*
@@ -302,9 +302,9 @@ System.out.println(monkeyEatPeach(1));
 
 ## 1.9 方法重载
 
-![](./images/2023-04-15-17-01-32-image.png)
+![](./images/day01-day08/2023-04-15-17-01-32-image.png)
 
-![](./images/2023-04-15-17-06-01-image.png)
+![](./images/day01-day08/2023-04-15-17-06-01-image.png)
 
 ```java
 // 方法重载
@@ -331,9 +331,9 @@ public int calculate(double b, int a) {
 
 可变参数：方法的可变参数可以当作数组使用。可以指定0-n个同类型参数。给可变参数的方法传实参时，也可以传一个数组。
 
-![](./images/2023-04-15-17-18-19-image.png)
+![](./images/day01-day08/2023-04-15-17-18-19-image.png)
 
-![](./images/2023-04-15-17-24-12-image.png)
+![](./images/day01-day08/2023-04-15-17-24-12-image.png)
 
 ```java
 // 可变参数：方法的可变参数可以当作数组使用。可以指定0-n个同类型参数。
@@ -374,11 +374,11 @@ System.out.println(sumWithStart(10, params));
 
 ### 1.11 变量作用域
 
-![](./images/2023-04-15-17-34-03-image.png)
+![](./images/day01-day08/2023-04-15-17-34-03-image.png)
 
-![](./images/2023-04-15-17-39-56-image.png)
+![](./images/day01-day08/2023-04-15-17-39-56-image.png)
 
-![](./images/2023-04-15-17-44-46-image.png)
+![](./images/day01-day08/2023-04-15-17-44-46-image.png)
 
 ```java
 class Person {
@@ -394,13 +394,13 @@ class Person {
 
 ### 1.12 构造方法
 
-![](./images/2023-04-15-17-52-00-image.png)
+![](./images/day01-day08/2023-04-15-17-52-00-image.png)
 
-![](./images/2023-04-15-17-52-48-image.png)
+![](./images/day01-day08/2023-04-15-17-52-48-image.png)
 
-![](./images/2023-04-15-17-56-35-image.png)
+![](./images/day01-day08/2023-04-15-17-56-35-image.png)
 
-![](./images/2023-04-15-18-13-07-image.png)
+![](./images/day01-day08/2023-04-15-18-13-07-image.png)
 
 ```java
 class Dog {
@@ -420,11 +420,11 @@ class Dog2 {
 
 ### 1.12 对象创建流程分析
 
-![](./images/2023-04-15-18-57-36-image.png)
+![](./images/day01-day08/2023-04-15-18-57-36-image.png)
 
-![](./images/2023-04-15-18-51-17-image.png)
+![](./images/day01-day08/2023-04-15-18-51-17-image.png)
 
-![](./images/2023-04-15-18-54-28-image.png)
+![](./images/day01-day08/2023-04-15-18-54-28-image.png)
 
 
 
@@ -434,15 +434,15 @@ class Dog2 {
 
 每个对象都有一个this能代表当前对象的。
 
-![](./images/2023-04-15-19-13-29-image.png)
+![](./images/day01-day08/2023-04-15-19-13-29-image.png)
 
-![](./images/2023-04-15-19-21-16-image.png)
+![](./images/day01-day08/2023-04-15-19-21-16-image.png)
 
 
 
 #### 1.13.2 this关键字的细节
 
-![](./images/2023-04-15-19-25-53-image.png)
+![](./images/day01-day08/2023-04-15-19-25-53-image.png)
 
 ```java
 class User {
@@ -493,7 +493,7 @@ user.compareTo(user2);
 
 ### 1.14 作业练习
 
-![](./images/2023-04-15-20-04-06-image.png)
+![](./images/day01-day08/2023-04-15-20-04-06-image.png)
 
 ```java
 // 作业1
@@ -572,7 +572,7 @@ book.getBookInfo();
 
 
 
-![](./images/2023-04-15-20-34-00-image.png)
+![](./images/day01-day08/2023-04-15-20-34-00-image.png)
 
 ```java
 class A03 {
@@ -595,11 +595,11 @@ int[] copyaArr = a.copyArr();
 
 
 
-![](./images/2023-04-15-20-47-46-image.png)
+![](./images/day01-day08/2023-04-15-20-47-46-image.png)
 
-![](./images/2023-04-15-20-48-08-image.png)
+![](./images/day01-day08/2023-04-15-20-48-08-image.png)
 
-![](./images/2023-04-15-20-49-43-image.png)
+![](./images/day01-day08/2023-04-15-20-49-43-image.png)
 
 ```java
 /* 作业11
@@ -614,9 +614,9 @@ public double method(double a, double b) {
 }
 ```
 
-![](./images/2023-04-15-20-56-29-image.png)
+![](./images/day01-day08/2023-04-15-20-56-29-image.png)
 
-![](./images/2023-04-15-20-56-48-image.png)
+![](./images/day01-day08/2023-04-15-20-56-48-image.png)
 
 ```java
 /*

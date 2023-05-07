@@ -116,7 +116,7 @@ if (score == 100) {
 
 ### 3.1 switch基本语法
 
-![](./images/2023-04-13-10-20-09-image.png)
+![](./images/day01-day08/2023-04-13-10-20-09-image.png)
 
 ```
 switch (表达式) {
@@ -169,21 +169,21 @@ switch (day) {
 
 ### 3.2 switch细节
 
-![](./images/2023-04-13-10-31-01-image.png)
+![](./images/day01-day08/2023-04-13-10-31-01-image.png)
 
 ## 4. for循环
 
 ### 4.1 基本语法
 
-![](./images/2023-04-13-10-38-48-image.png)
+![](./images/day01-day08/2023-04-13-10-38-48-image.png)
 
 ### 4.2 for循环执行流程
 
-![](./images/2023-04-13-10-41-04-image.png)
+![](./images/day01-day08/2023-04-13-10-41-04-image.png)
 
 ### 4.3 for循环细节
 
-![](./images/2023-04-13-10-44-11-image.png)
+![](./images/day01-day08/2023-04-13-10-44-11-image.png)
 
 ```java
 // 循环初始值和循环变量迭代写在其他地方
@@ -223,7 +223,7 @@ System.out.println("1-100内9的倍数的整数的合计值：" + sum);
 
 练习2：完成下面图片中的表达式的输出。
 
-![](./images/2023-04-13-11-06-43-image.png)
+![](./images/day01-day08/2023-04-13-11-06-43-image.png)
 
 ```java
 int start = 0;
@@ -238,15 +238,15 @@ for (int i = start ; i <= max; i++) {
 
 ### 5.1 while循环的基本语法
 
-![](./images/2023-04-13-11-14-27-image.png)
+![](./images/day01-day08/2023-04-13-11-14-27-image.png)
 
 ### 5.2 while循环的执行流程
 
-![](./images/2023-04-13-11-18-34-image.png)
+![](./images/day01-day08/2023-04-13-11-18-34-image.png)
 
 ### 5.3 while循环的细节
 
-![](./images/2023-04-13-11-20-12-image.png)
+![](./images/day01-day08/2023-04-13-11-20-12-image.png)
 
 ### 5.4 while循环的练习
 
@@ -283,15 +283,15 @@ while (i <= maxNum) {
 
 ### 6.1 do while循环的基本语法
 
-![](./images/2023-04-13-11-33-15-image.png)
+![](./images/day01-day08/2023-04-13-11-33-15-image.png)
 
 ### 6.2 do while循环的执行流程
 
-![](./images/2023-04-13-11-33-42-image.png)
+![](./images/day01-day08/2023-04-13-11-33-42-image.png)
 
 ### 6.2 do while循环的细节
 
-![](./images/2023-04-13-11-35-14-image.png)
+![](./images/day01-day08/2023-04-13-11-35-14-image.png)
 
 ### 6.3 do while循环练习
 
@@ -362,11 +362,11 @@ do {
 
 ### 7.1 多重循环基本介绍
 
-![](./images/2023-04-13-12-02-28-image.png)
+![](./images/day01-day08/2023-04-13-12-02-28-image.png)
 
 ### 7.2 多重循环练习
 
-![](./images/2023-04-13-12-05-13-image.png)
+![](./images/day01-day08/2023-04-13-12-05-13-image.png)
 
 练习3：打印九九乘法表
 
@@ -385,7 +385,7 @@ for (int i = 1; i <= max; i++) {
 
 练习4：打印一个空心金字塔。
 
-![](./images/2023-04-13-12-14-14-image.png)
+![](./images/day01-day08/2023-04-13-12-14-14-image.png)
 
 ```java
 System.out.println("请输入要打印的金字塔的层数：);
@@ -595,9 +595,9 @@ System.out.println(inputNumber + "不是水仙花数");
 
 ### 8.1 跳转控制语句-`break`
 
-![](./images/2023-04-13-19-46-38-image.png)
+![](./images/day01-day08/2023-04-13-19-46-38-image.png)
 
-![](./images/2023-04-13-19-47-21-image.png)
+![](./images/day01-day08/2023-04-13-19-47-21-image.png)
 
 ```java
 loop1:
@@ -615,8 +615,8 @@ for (int i =0; i< 3; i++) {
 
 ### 8.2 跳转控制语句-`continue`
 
-![](./images/2023-04-13-19-54-24-image.png)
+![](./images/day01-day08/2023-04-13-19-54-24-image.png)
 
 ### 8.3 跳转控制语句-`return`
 
-![](./images/2023-04-13-19-55-39-image.png)
+![](./images/day01-day08/2023-04-13-19-55-39-image.png)
